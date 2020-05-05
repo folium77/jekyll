@@ -4,6 +4,9 @@
   --------------------------------------------------------- */
   header{
     padding: 1em 0px 9em !important;
+    .default & {
+      background-position: center;
+    }
     h1{
       img{
         width: 110px !important;
@@ -35,7 +38,7 @@
     }
   }
 
-  .single, .archive{
+  .post, .archive{
     header{
       padding: .8em 0 .6em !important;
     }
