@@ -146,7 +146,7 @@
     text-align: justify;
     -webkit-font-smoothing: antialiased;
     color: #333;
-    @include fontSize(1.8);
+    @include fontSize(1.6);
     h1{
       margin: 1em 0;
       @include fontSize(3.4);
