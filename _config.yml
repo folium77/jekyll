@@ -13,3 +13,6 @@ sass:
 
 gems:
   - jekyll-feed
+
+feed:
+  path: feed/index.xml
