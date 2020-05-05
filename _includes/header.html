@@ -1,10 +1,9 @@
   <!-- header -->
   <header>
-    {% assign heading = '<img src="/assets/images/logo.svg" alt="日暮れの音">' %}
     {% if page.url == '/' %}
-      <h1>{{ heading }}</h1>
+      <h1><img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="日暮れの音"></h1>
     {% else %}
-      <h2><a href="{{ '/' | relative_url }}">{{ heading }}</a></h2>
+      <h2><a href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="日暮れの音"></a></h2>
     {% endif %}
   </header>
   <!-- /header -->
