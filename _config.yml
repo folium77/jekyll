@@ -1,4 +1,4 @@
-title: funnysunday
+title: 日暮れの音
 description: >
   
 baseurl: "/"
@@ -14,10 +14,3 @@ sass:
 gems:
   - jekyll-feed
   - jekyll-archives
-
-jekyll-archives:
-  enabled: [year, categories]
-  layouts: archive
-  permalinks:
-    year: '/archives/year/:year/'
-    categories: '/category/:name/'

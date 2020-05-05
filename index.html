@@ -1,15 +1,24 @@
 ---
 layout: default
 ---
-
 <ul id="entries">
   {% for post in site.posts %}
-  <li >
+  <li>
     <a href="{{ post.url | relative_url }}">
       <figure>
-        <span class="color01"></span>
-        <figcaption><span><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%Y.%m.%d' }}</time>{{ post.excerpt }}</span></figcaption>
-      </figure>
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        {% else %}
+          <span class="js-entry-bg"></span>
+        {% endif %}
+        <figcaption>
+          <span>
+            <time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%Y.%m.%d' }}</time>
+            {{ post.content | strip_html | truncate: 51 }}
+          </span>
+        </figcaption>
+
+        </figure>
       {{ post.title }}
     </a>
   </li >

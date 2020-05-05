@@ -107,7 +107,7 @@ footer{
     font-size: 0;
     @extend .cf;
     section{
-      float: right;
+      float: left;
       width: 25%;
       vertical-align: top;
       @include fontSize(1.2);
