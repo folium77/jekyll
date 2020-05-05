@@ -19,5 +19,5 @@ jekyll-archives:
   enabled: [year, categories]
   layouts: archive
   permalinks:
-    year: '/archives/year/:year/'
-    categories: '/category/:name/'
+    year: '/jekyll/archives/year/:year/'
+    categories: '/jekyll/category/:name/'
