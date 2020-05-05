@@ -1,0 +1,182 @@
+/* HOME
+--------------------------------------------------------- */
+.default{
+  header{
+    padding: 3em 0 24em;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1) inset;
+    background: url(/assets/images/visual.jpg) no-repeat center bottom;
+    background-color: #4C72BD;
+    background-size: cover;
+    h1{
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: right;
+      @media screen and (max-width: 1240px) {
+        width: 90% !important;
+      }
+
+      img {
+        width: 150px;
+        height: auto;
+        opacity: .7;
+      }
+    }
+  }
+}
+
+/* ENTRIES
+--------------------------------------------------------- */
+#entries{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0;
+  li{
+    display: inline-block;
+    width: 25%;
+    //max-width: 200px;
+    vertical-align: top;
+    text-align: center;
+    @include fontSize(1.6);
+    //font-weight: bold;
+    a{
+      display: block;
+      padding: 0 25px 25px;
+      color: #666;
+      &:hover, .inText{
+        text-decoration: none;
+        figure{
+          figcaption{
+            bottom: 0;
+            transition: all .4s;
+          }
+        }
+      }
+      figure{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1em;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: none;
+          opacity: 1;
+        }
+        $category_names: color01,  color02, color03, color04;
+        $category_colors: $color01, $color02, $color03, $color04;
+        span{
+          display: inline-block;
+          width: 200px;
+          height: 200px;
+          @each $class_name in $category_names {
+          $index_key: index($category_names, $class_name);
+            &.#{$class_name} {
+              background-color: nth($category_colors, $index_key);
+            }
+          }
+        }
+        figcaption{
+          position: absolute;
+          transition: all .4s;
+          bottom: -100%;
+          left: 0;
+          min-width: 200px;
+          height: 100%;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #FFF;
+          text-align: center;
+          word-break: break-all;
+          line-height: 1.8;
+          @include fontSize(1.4);
+          span{
+            width: 80%;
+            height: 11em;
+            padding: 12% 10% 11%;
+            overflow : hidden;
+            //text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            //-webkit-line-clamp: 3;
+            vertical-align: middle;
+            time{
+              display: block;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ARCHIVES
+--------------------------------------------------------- */
+.archive{
+  #contents{
+    margin-top: 4em;
+    h1{
+      margin-bottom: 2em;
+      text-align: center;
+      @include fontSize(2);
+      font-weight: bold;
+      letter-spacing: .2em;
+      &:first-letter{
+        //color: #5CA4A9;
+      }
+    }
+  }
+}
+
+/* DETAIL
+--------------------------------------------------------- */
+.post{
+  #contents{
+    margin: 3em 0;
+  }
+  article{
+    width: 90%;
+    max-width: 655px;
+    margin: 0 auto;
+    text-align: justify;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    @include fontSize(1.8);
+    h1{
+      margin: 1em 0;
+      @include fontSize(3.4);
+      line-height: 1.2;
+      letter-spacing: .08em;
+      &:first-letter{
+       color: $color01;
+      }
+    }
+    h2 {
+      margin-bottom: 1em;
+      font-size: 2.2rem;
+      font-weight: bold;
+      border-bottom: solid 1px #5CA4A9;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .date{
+      margin: 4em 0;
+      text-align: right;
+      @include fontSize(1.3);
+      font-style: italic;
+    }
+  }
+}
+
+.wp-embedded-content {
+  width: 100%;
+}

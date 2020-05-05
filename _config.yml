@@ -1,0 +1,23 @@
+title: funnysunday
+description: >
+  
+baseurl: "/"
+url: "https://folium77.github.io"
+
+author:
+  name: kiyo
+  github: folium77
+
+sass:
+  style: compressed
+
+gems:
+  - jekyll-feed
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: [year, categories]
+  layouts: archive
+  permalinks:
+    year: '/archives/year/:year/'
+    categories: '/category/:name/'

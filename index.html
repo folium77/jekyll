@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<ul id="entries">
+  {% for post in site.posts %}
+  <li >
+    <a href="{{ post.url | relative_url }}">
+      <figure>
+        <span class="color01"></span>
+        <figcaption><span><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%Y.%m.%d' }}</time>{{ post.excerpt }}</span></figcaption>
+      </figure>
+      {{ post.title }}
+    </a>
+  </li >
+  {% endfor %}
+</ul>

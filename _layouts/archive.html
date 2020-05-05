@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+
+
+<h1>{% if page.path contains 'archives' %}{{ page.date | date: "%Y" }}年{% else if page.path contains 'year' %}{{ page.title }}{% endif %}</h1>
+<ul id="entries">
+  {% for post in page.posts %}
+  <li >
+    <a href="{{ post.url | relative_url }}">
+      <figure>
+        <span class="color01"></span>
+        <figcaption><span><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%Y.%m.%d' }}</time>{{ post.excerpt }}</span></figcaption>
+      </figure>
+      {{ post.title }}
+    </a>
+  </li >
+  {% endfor %}
+</ul>
