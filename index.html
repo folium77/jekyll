@@ -7,7 +7,7 @@ layout: default
     <a href="{{ post.url | relative_url }}">
       <figure>
         {% if post.image %}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          <img src="{{ post.image | relative_url | replace: '.jpg', '_thumbnail.jpg' }}" alt="{{ post.title }}">
         {% else %}
           <span class="js-entry-bg"></span>
         {% endif %}
