@@ -1,6 +1,6 @@
 title: 日暮れの音
 description: "nightfall sounds"
-  
+
 baseurl: "/"
 url: "https://funnysunday.com"
 
@@ -13,6 +13,7 @@ sass:
 
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 
 feed:
   path: feed/index.xml
