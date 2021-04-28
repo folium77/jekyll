@@ -34,5 +34,27 @@
       {% include footer.html %}
     </div>
     <script src="{{ '/assets/js/common.js' | relative_url }}"></script>
+    {% if page.layout != 'default' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "HOME",
+            "item": "{{ '/' | absolute_url }}"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SEO",
+            "item": "{{ page.url | replace:'index.html','' | absolute_url }}"
+          },
+        ]
+      }
+    </script>
+    {% endif %}
   </body>
 </html>
