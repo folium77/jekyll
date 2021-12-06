@@ -51,6 +51,9 @@ blockquote {
   margin-bottom: 2em;
   padding: 25px 36px;
   background-color: #f7f9f9;
+  @media (prefers-color-scheme: dark){
+    background-color: #2C2C2C;
+  }
 }
 blockquote p:last-child {
   margin-bottom: 0;
