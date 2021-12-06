@@ -2,6 +2,7 @@ $sansSerif: 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku 
 $serif: 'ヒラギノ明朝 Pro W6', 'Hiragino Mincho Pro', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
 
 $fontColor: #4C4C4C;
+$fontColorDark: #CACACA;
 $linkColor: #4C4C4C;
 
 $color01: #5CA4A9;
@@ -36,7 +37,7 @@ $color05: #E6EBE0;
       opacity: .7;
     }
     @media (prefers-color-scheme: dark){
-      color: #cacace; 
+      color: $fontColorDark; 
     }
     img{
       border: none;
