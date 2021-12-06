@@ -44,6 +44,9 @@
       display: block;
       padding: 0 25px 25px;
       color: #666;
+      @media (prefers-color-scheme: dark){
+        color: $fontColorDark; 
+      }
       &:hover, .inText{
         text-decoration: none;
         figure{
