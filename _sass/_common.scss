@@ -20,6 +20,11 @@ body {
   font-family: $sansSerif;
   line-height: 2;
   color: $fontColor;
+
+  @media (prefers-color-scheme: dark){
+    background-color: #141415;
+    color: #cacace; 
+  }
 }
 @media print{
   body {
