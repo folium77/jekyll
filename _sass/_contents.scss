@@ -174,6 +174,9 @@
       font-size: 1.8rem;
       font-weight: bold;
     }
+    a {
+      word-break: break-all;
+    } 
     .date{
       margin: 4em 0;
       text-align: right;
